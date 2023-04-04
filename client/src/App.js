@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 //Global Style
 import GlobalStyle from "./styles/GlobalStyle";
@@ -11,7 +11,6 @@ import AboutMe from "./pages/AboutMe";
 import Admin from "./pages/admin";
 import Login from "./pages/Auth/login";
 import Register from "./pages/Auth/register";
-
 
 import ParticlesBackground from "./components/particles";
 
@@ -56,14 +55,17 @@ library.add(
 );
 
 function App() {
-  const [language, setLanguage] = useState(true)
+  const [language, setLanguage] = useState(true);
 
   return (
     <div>
       <ParticlesBackground />
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={<AboutMe language={language} setLanguage={setLanguage} />} />
+        <Route
+          path="/"
+          element={<AboutMe language={language} setLanguage={setLanguage} />}
+        />
         <Route path="/admin" element={<Admin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -73,14 +75,3 @@ function App() {
 }
 
 export default App;
-
-// <Routes>
-//         <Route path="/" element={<AboutMe />} />
-//         <Route path="/dev" element={<ServiceSection />} />
-//         <Route path="/portfolio" element={<Portfolio />} />
-//         <Route path="/portfolio/:slug" element={<Portfolio />} />
-//         <Route path="/contact" element={<ContactMe />} />
-//         <Route path="/admin" element={<Admin location={location} />} />
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/register" element={<Register/>} />
-//       </Routes>

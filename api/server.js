@@ -1,12 +1,12 @@
 const express = require('express')
 var path = require('path');
 var logger = require('morgan');
-require('./backend/db/mongoConnection')
+require('./db/mongoConnection')
 require('dotenv').config()
 
 var cors = require('cors')
 
-const api = require('./backend/routes')
+const api = require('./routes')
 
 const bodyParser = require('body-parser')
 

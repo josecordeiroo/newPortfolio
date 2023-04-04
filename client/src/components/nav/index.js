@@ -34,7 +34,7 @@ const NavBar = ({ language, setLanguage }) => {
         </div>
         <ul>
           <li>
-            <a href="#">{language ? "<SobreMim />" : "<AboutMe />"}</a>
+            <a href="/#">{language ? "<SobreMim />" : "<AboutMe />"}</a>
           </li>
           <li>
             <a href="#services">
@@ -138,7 +138,7 @@ const NavBar = ({ language, setLanguage }) => {
         {open && (
           <Burguer>
             <div className="burguer">
-              <a href="#">{language ? "<SobreMim />" : "<AboutMe />"}</a>
+              <a href="/#">{language ? "<SobreMim />" : "<AboutMe />"}</a>
               <a href="#services">
                 {language ? "<Portfólio />" : "<Portfolio />"}
               </a>
