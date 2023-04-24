@@ -11,6 +11,5 @@ export default Contact
 
 const Container = styled.div`
   height: 100vh;
-  background-color: purple;
   scroll-snap-align: center;
 `

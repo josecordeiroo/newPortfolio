@@ -11,6 +11,5 @@ export default Who
 
 const Container = styled.div`
   height: 100vh;
-  background-color: #008035;
   scroll-snap-align: center;
 `
