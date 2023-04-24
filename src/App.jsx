@@ -1,9 +1,18 @@
-import './App.css';
+import "./App.css";
+
+//Components
+import Contact from "./components/contact/Contact";
+import Hero from "./components/hero/Hero";
+import Who from "./components/who/Who";
+import Works from "./components/works/Works";
 
 function App() {
   return (
     <div className="App">
-      ola
+      <Hero />
+      <Who />
+      <Works />
+      <Contact />
     </div>
   );
 }
