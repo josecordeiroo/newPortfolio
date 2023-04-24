@@ -1,9 +1,27 @@
-import React from 'react'
+import React from "react";
+
+import styled from "styled-components";
+
+import Hero from "./components/Hero";
+import Who from "./components/Who";
+import Works from "./components/Works";
+import Contact from "./components/Contact";
+
 
 function App() {
   return (
-    <div>App</div>
-  )
+    <Container>
+      <Hero />
+      <Who />
+      <Works />
+      <Contact />
+    </Container>
+  );
 }
 
-export default App
+export default App;
+
+const Container = styled.div`
+  height: 100vh;
+  background-color: purple;
+`
