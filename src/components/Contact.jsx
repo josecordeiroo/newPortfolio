@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 function Contact() {
   return (
-    <Container>Contact</Container>
+    <Section>Contact</Section>
   )
 }
 
 export default Contact
 
-const Container = styled.div`
+const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
 `

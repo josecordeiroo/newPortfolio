@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 function Who() {
   return (
-    <Container>Who</Container>
+    <Section>Who</Section>
   )
 }
 
 export default Who
 
-const Container = styled.div`
+const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
 `

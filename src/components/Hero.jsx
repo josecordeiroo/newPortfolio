@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 function Hero() {
   return (
-    <Container>Hero</Container>
+    <Section>Hero</Section>
   )
 }
 
 export default Hero
 
-const Container = styled.div`
+const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
 `

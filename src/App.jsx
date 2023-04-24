@@ -2,15 +2,16 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Who from "./components/Who";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 
-
 function App() {
   return (
     <Container>
+      <Navbar />
       <Hero />
       <Who />
       <Works />
@@ -30,7 +31,7 @@ const Container = styled.div`
   scrollbar-width: none;
   color: white;
   background: url("./img/bg.jpeg");
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
-`
+`;
