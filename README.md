@@ -1,1 +1,0 @@
-Developing a new personal portfolio
