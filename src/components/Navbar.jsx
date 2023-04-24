@@ -10,8 +10,8 @@ function Navbar() {
           <Logo>José Cordeiro</Logo>
           <List>
             <ListItem>Início</ListItem>
-            <ListItem>Setup</ListItem>
             <ListItem>Experiência</ListItem>
+            <ListItem>Setup</ListItem>
             <ListItem>Contato</ListItem>
           </List>
         </Links>
@@ -30,27 +30,47 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const Container = styled.div`
   width: 1400px;
-  background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
 `;
 
 const Logo = styled.h1`
-    
+    height: 50px;
 `
 
 const Links = styled.div`
-  width: 1400px;
-  background-color: rebeccapurple;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 `;
 
-const List = styled.ul``;
-const ListItem = styled.li``;
+const List = styled.ul`
+    display: flex;
+    gap: 20px;
+    list-style: none;
+`;
+const ListItem = styled.li`
+    cursor: pointer;
+`;
 
 const Icons = styled.div`
-  width: 1400px;
-  background-color: rebeccapurple;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 `;
 
-const Icon = styled.img``;
-const Button = styled.button``;
+const Icon = styled.img`
+    width: 20px;
+    cursor: pointer;
+`;
+const Button = styled.button`
+    width: 100px;
+    padding: 10px;
+    background-color: #da4ea2;
+    color: white;
+`;
