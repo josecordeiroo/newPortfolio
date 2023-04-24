@@ -1,4 +1,3 @@
-import "./App.css";
 import styled from "styled-components";
 
 //Components
@@ -23,5 +22,11 @@ export default App;
 //Styled
 const Container = styled.div`
   height: 100vh;
-  background-color: rebeccapurple;
-`
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
