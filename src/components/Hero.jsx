@@ -1,9 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <Container>Hero</Container>
   )
 }
 
 export default Hero
+
+const Container = styled.div`
+  height: 100vh;
+  background-color: #003380;
+`

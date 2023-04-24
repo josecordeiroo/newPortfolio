@@ -1,9 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
 
 function Works() {
   return (
-    <div>Works</div>
+    <Container>Works</Container>
   )
 }
 
 export default Works
+
+const Container = styled.div`
+  height: 100vh;
+  background-color: #801300;
+`
