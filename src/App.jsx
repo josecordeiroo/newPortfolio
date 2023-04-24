@@ -1,4 +1,5 @@
 import "./App.css";
+import styled from "styled-components";
 
 //Components
 import Contact from "./components/contact/Contact";
@@ -8,13 +9,19 @@ import Works from "./components/works/Works";
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <Hero />
       <Who />
       <Works />
       <Contact />
-    </div>
+    </Container>
   );
 }
 
 export default App;
+
+//Styled
+const Container = styled.div`
+  height: 100vh;
+  background-color: rebeccapurple;
+`
