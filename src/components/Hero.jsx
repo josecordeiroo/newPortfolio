@@ -73,6 +73,7 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+  margin-top: -20px;
 `;
 const Button = styled.button`
   background-color: #8e03ff;
