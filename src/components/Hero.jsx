@@ -14,8 +14,7 @@ function Hero() {
             <Subtitle>Sobre mim</Subtitle>
           </AboutMe>
           <Desc>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-            fugiat ipsa molestias iusto iste ut dignissimos facilis.
+            Paulistano, 32 anos, trabalho com Javascript e Typescript, usando principalmente MERN (React, Node, Express e MongoDB), possuindo conhecimento em diversas tecnologias. Formado em Análise e Desenvolvimento de Sistemas pela Universidade Anhembi Morumbi e Administração de empresas pela Faculdade FMU.
           </Desc>
           <Button>Conhecer mais</Button>
         </Left>
