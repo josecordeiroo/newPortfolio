@@ -25,7 +25,7 @@ const Container = styled.div`
   background-color: purple;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  /* overflow-y: auto; */
+  overflow-y: auto;
   scrollbar-width: none;
   color: white;
   background: url("./img/bg.jpeg");

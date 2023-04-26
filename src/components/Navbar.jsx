@@ -10,7 +10,7 @@ function Navbar() {
           <Logo>José Cordeiro</Logo>
           <List>
             <ListItem>Início</ListItem>
-            <ListItem>Experiência</ListItem>
+            <ListItem>Experiências</ListItem>
             <ListItem>Setup</ListItem>
             <ListItem>Contato</ListItem>
           </List>
