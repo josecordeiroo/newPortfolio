@@ -12,16 +12,14 @@ function Who() {
           <Title>Sempre pensando fora da caixa</Title>
           <AboutMe>
             <Line src="./img/line.png" />
-            <Subtitle>Sobre mim</Subtitle>
+            <Subtitle>Tecnologias</Subtitle>
           </AboutMe>
           <Desc>
-            Paulistano, 32 anos, trabalho com Javascript e Typescript, usando
+            Trabalho com Javascript e Typescript, usando
             principalmente MERN (React, Node, Express e MongoDB), possuindo
-            conhecimento em diversas tecnologias. Formado em Análise e
-            Desenvolvimento de Sistemas pela Universidade Anhembi Morumbi e
-            Administração de empresas pela Faculdade FMU.
+            conhecimento em diversas tecnologias.
           </Desc>
-          <Button>Conhecer mais</Button>
+          <Button>Veja alguns projetos</Button>
         </Right>
       </Container>
     </Section>
@@ -76,7 +74,7 @@ const Button = styled.button`
   color: white;
   font-weight: 500;
   font-size: 18px;
-  width: 150px;
+  width: 220px;
   padding: 10px;
   border: none;
   border-radius: 5px;
