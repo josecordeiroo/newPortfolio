@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-import { ComposableMap, Geographies, Geography, Annotation  } from "react-simple-maps"
-
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"
+import Map from "./Map";
 
 function Contact() {
   return <Section>
@@ -19,15 +15,7 @@ function Contact() {
         </Form>
       </Left>
       <Right>
-      <ComposableMap>
-      <Geographies geography={geoUrl}>
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography key={geo.rsmKey} geography={geo} />
-          ))
-        }
-      </Geographies>
-    </ComposableMap>
+      <Map/>
       </Right>
     </Container>
   </Section>;

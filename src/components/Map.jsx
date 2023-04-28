@@ -4,47 +4,59 @@ import {
   Geographies,
   Geography,
   Annotation,
-  ZoomableGroup
+  ZoomableGroup,
 } from "react-simple-maps";
 
-const MapChart = () => {
+const Map = () => {
   return (
     <ComposableMap
-      projection="geoAzimuthalEqualArea"
+      projection="geoMercator"
       projectionConfig={{
-        rotate: [-10.0, -52.0, 0],
-        center: [-5, -3],
-        scale: 1100
+        scale: 800,
+        center: [-55, -10],
       }}
+      style={{ width: "100%", height: "100%" }}
     >
-      <Geographies
-        geography="/features.json"
-        fill="#D6D6DA"
-        stroke="#FFFFFF"
-        strokeWidth={0.5}
-      >
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography key={geo.rsmKey} geography={geo} />
-          ))
-        }
-      </Geographies>
-      <Annotation
-        subject={[2.3522, 48.8566]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "#FF5533",
-          strokeWidth: 3,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
-          {"Paris"}
-        </text>
-      </Annotation>
+      <ZoomableGroup>
+        <Geographies geography="/features.json">
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                fill="#8e03ff"
+                stroke="#FFFFFF"
+                strokeWidth={0.5}
+              >
+                {/* Renderiza o nome do estado */}
+                <text
+                  textAnchor="middle"
+                  style={{ pointerEvents: "none" }}
+                  dy={-10}
+                >
+                  {geo.properties.name}
+                </text>
+              </Geography>
+            ))
+          }
+        </Geographies>
+        <Annotation
+          subject={[-46.6388, -23.5489]}
+          dx={-70}
+          dy={-50}
+          connectorProps={{
+            stroke: "white",
+            strokeWidth: 2,
+            strokeLinecap: "round",
+          }}
+        >
+          <text x="-40" y="-20" textAnchor="center" alignmentBaseline="middle" fill="white">
+            {"São Paulo | BR"}
+          </text>
+        </Annotation>
+      </ZoomableGroup>
     </ComposableMap>
   );
 };
 
-export default MapChart;
+export default Map;
