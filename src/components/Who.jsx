@@ -1,4 +1,12 @@
+import {
+  OrbitControls,
+  PerspectiveCamera,
+  RenderTexture,
+  Text,
+} from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import React from "react";
+import Cube from "./Cube";
 import styled from "styled-components";
 
 function Who() {
@@ -6,7 +14,12 @@ function Who() {
     <Section>
       <Container>
         <Left>
-
+          <Canvas camera={{fov: 25, position: [6, 6, 6] }}>
+            <OrbitControls enableZoom={false} autoRotate={true} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Cube />
+          </Canvas>
         </Left>
         <Right>
           <Title>Buscando sempre melhorar</Title>
@@ -15,9 +28,10 @@ function Who() {
             <Subtitle>Tecnologias</Subtitle>
           </AboutMe>
           <Desc>
-            Trabalho com Javascript e Typescript, usando
-            principalmente MERN (React, Node, Express e MongoDB), possuindo
-            conhecimento em diversas tecnologias e buscando a evolução constante, aprimorando meus conhecimentos todos os dias.
+            Trabalho com Javascript e Typescript, usando principalmente MERN
+            (React, Node, Express e MongoDB), possuindo conhecimento em diversas
+            tecnologias e buscando a evolução constante, aprimorando meus
+            conhecimentos todos os dias.
           </Desc>
           <Button>Veja alguns projetos</Button>
         </Right>
@@ -45,7 +59,6 @@ const Container = styled.div`
 
 const Left = styled.div`
   flex: 1;
-  
 `;
 
 const Title = styled.h1`
