@@ -87,6 +87,3 @@ const Right = styled.div`
   justify-content: center;
   gap: 20px;
 `;
-
-
-//update
