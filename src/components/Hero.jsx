@@ -14,7 +14,7 @@ function Hero() {
             <Subtitle>Sobre mim</Subtitle>
           </AboutMe>
           <Desc>
-            Paulistano, 32 anos, trabalho com Javascript e Typescript, usando principalmente MERN (React, Node, Express e MongoDB), possuindo conhecimento em diversas tecnologias. Formado em Análise e Desenvolvimento de Sistemas pela Universidade Anhembi Morumbi e Administração de empresas pela Faculdade FMU.
+            Paulistano, 32 anos, formado em Análise e Desenvolvimento de Sistemas pela Universidade Anhembi Morumbi e Administração de empresas pela Faculdade FMU.
           </Desc>
           <Button>Conhecer mais</Button>
         </Left>
@@ -40,7 +40,6 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;

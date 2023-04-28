@@ -9,7 +9,7 @@ function Who() {
 
         </Left>
         <Right>
-          <Title>Sempre pensando fora da caixa</Title>
+          <Title>Buscando sempre melhorar</Title>
           <AboutMe>
             <Line src="./img/line.png" />
             <Subtitle>Tecnologias</Subtitle>
@@ -17,7 +17,7 @@ function Who() {
           <Desc>
             Trabalho com Javascript e Typescript, usando
             principalmente MERN (React, Node, Express e MongoDB), possuindo
-            conhecimento em diversas tecnologias.
+            conhecimento em diversas tecnologias e buscando a evolução constante, aprimorando meus conhecimentos todos os dias.
           </Desc>
           <Button>Veja alguns projetos</Button>
         </Right>
@@ -38,7 +38,6 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
