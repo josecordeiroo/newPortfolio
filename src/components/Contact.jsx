@@ -1,24 +1,70 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Map from "./Map";
 
+import emailjs from "@emailjs/browser";
+
 function Contact() {
-  return <Section>
-    <Container>
-      <Left>
-        <Form>
-          <Title>Entre em contato:</Title>
-          <Input placeholder="Nome"/>
-          <Input placeholder="E-mail"/>
-          <TextArea rows={10} placeholder="Digite sua mensagem"/>
-          <Button>Enviar</Button>
-        </Form>
-      </Left>
-      <Right>
-      <Map/>
-      </Right>
-    </Container>
-  </Section>;
+  const ref = useRef();
+
+  const [message, setMessage] = useState({
+    status: false,
+    text: "",
+  });
+
+  function clearInputs() {
+    const inputs = document.querySelectorAll("input, textarea");
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    try {
+      emailjs.sendForm(
+        "service_ezau2ds",
+        "template_z8o3izl",
+        ref.current,
+        "ZG1ABvqBgv9swIMND"
+      );
+        clearInputs();
+        setMessage({
+          status: true,
+          text: "Mensagem enviada com sucesso! Retornarei o mais rápido possível.",
+        });
+    } catch (error) {
+      setMessage({
+        status: true,
+        text: "Falha ao enviar mensagem. Por favor, tente novamente.",
+      });
+    }
+  };
+
+  return (
+    <Section>
+      <Container>
+        <Left>
+          <Form ref={ref} onSubmit={handleSubmit}>
+            <Title>Entre em contato</Title>
+            <Input name="name" placeholder="Nome" />
+            <Input name="email" placeholder="E-mail" />
+            <TextArea
+              name="message"
+              rows={10}
+              placeholder="Digite sua mensagem"
+            />
+            <Button type="submit">Enviar</Button>
+            {message.status && <span>{message.text}</span>}
+          </Form>
+        </Left>
+        <Right>
+          <Map />
+        </Right>
+      </Container>
+    </Section>
+  );
 }
 
 export default Contact;
@@ -44,7 +90,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-    font-weight: 200;
+  font-weight: 200;
 `;
 
 const Form = styled.form`
@@ -77,7 +123,6 @@ const Button = styled.button`
   cursor: pointer;
   padding: 20px;
 `;
-
 
 const Right = styled.div`
   flex: 1;
