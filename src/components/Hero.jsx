@@ -1,4 +1,7 @@
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import React from "react";
+import Cube from "./Cube";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 
@@ -14,12 +17,26 @@ function Hero() {
             <Subtitle>Sobre mim</Subtitle>
           </AboutMe>
           <Desc>
-            Paulistano, 32 anos, formado em Análise e Desenvolvimento de Sistemas pela Universidade Anhembi Morumbi e Administração de empresas pela Faculdade FMU.
+            Paulistano, 32 anos, formado em Análise e Desenvolvimento de
+            Sistemas pela Universidade Anhembi Morumbi e Administração de
+            empresas pela Faculdade FMU.
           </Desc>
           <Button>Conhecer mais</Button>
         </Left>
         <Right>
-          {/* 3d model */}
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[1, 100, 200]} scale={1.8}>
+              <MeshDistortMaterial
+                color="#6010a1"
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
           <Img src="./img/moon.png" />
         </Right>
       </Container>
